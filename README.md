@@ -1,0 +1,1 @@
+This is my first web project for The Odin Project. This is a simple clone of Google.com and is built to improve my HTML/CSS and Chrome web-dev tool skills.
