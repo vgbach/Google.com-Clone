@@ -1,52 +1,148 @@
 <style>
-    li {
-        display: inline;
+    * {
+    box-sizing: border-box;
     }
     a {
-        padding: 10px;
-        font-family: Arial, sans-serif;
-        font-size: 13px;
         text-decoration: none !important;
-        color: black !important;
     }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    .logo {
-        padding-top: 110px;
-        display: block;
-        margin: auto;
-    }
-    .icon {
-        justify-content: center;
-        align-items: center;
-    }
-    button {
+    #sign-in {
         border-radius: 2px;
         padding: 7px 10px;
         border: none;   
         background-color: hsl(217,83%,60%);
+        color: white;
         font-size: 15px;
+    }   
+    ul { 
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        align-items: center;
+    }
+    li {
+        float: left;
+    }
+    #header li a {
+        font-family: arial, san-serif;
+        font-size: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+        color: black;
+    }
+    #header {
+
+        padding-top: 20px;
+    }
+    #logo {
+        padding-top: 150px;
+        padding-bottom: 40px;
+        display: block;
+        margin: auto;
+    }
+    #s-bar {
+        margin: auto;
+        width: 600px;
+        height: 47px;
+        border-style: solid;
+        border-color: hsl(220,10%,88%);
+        border-width: 1px;
+        border-radius: 80px;
+    }
+    #s-bar:hover {
+        box-shadow: 0px 4px 4px rgb(242,242,242);
+    }
+    #s-icon {
+        margin-top: 10px
+    }
+    input {
+        font-size: 20px;
+        padding-bottom: 4px;
+        padding-left: 10px;
+        width: 500px;
+        height: 28px;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: hidden;
+    }
+    #s-buttons {
+        padding-top: 30px;
+        max-width: 270px;
+        margin: auto;
+    }
+    .s-button {
+        border-radius: 5px;
+        padding: 10px 10px;
+        border: none;   
+        color: hsl(293,11%,45%);
+        font-size: 15px;
+        background-color: hsl(0,0%,95%);
+    }
+    #footer {
+        align-items: center;
+        background-color: hsl(0,0%,94%);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-style: solid;
+        border-color: hsl(0,0%,89%);
+        border-width: 1px;
+    }
+    #footer li a{
+        font-family: arial, san-serif;
+        font-size: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+        color: hsl(213,4%,42%);
     }
 </style>
-<head>
-
-</head>
+<header>
+    <link href="reset.css" rel="stylesheet" type="text/css" media="all"/>
+</header>
 <body>
-    <div style="height: 90px">
-    <ul style="padding-top: 20px;">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Store</a></li>
-        <div style="float: right;">
-        <li><a href="#">Gmail</a></li>
-        <li><a href="#">Images</a></li>
-        <li  class="icon"><a href="#"><img src="apps.png"></a></li>
-        <li><a><button style="color: white;">sign in</button></a></li>
-        </div>
-    </ul>
+    <div id="header">
+        <ul>
+            <li style="padding-left: 10px;"><a href="#">About</a></li>
+            <li><a href="#">Store</a></li>
+            <div style="float: right; align-items: center;">
+                <li ><a href="#">Gmail</a></li>
+                <li><a href="#">Images</a></li>
+                <li style="padding-left: 20px; padding-right: 0px;"><a href="#"></a><img src="apps.png" alt="Apps Icon"></li>
+                <li><a href="#"><button id="sign-in">Sign in</button></a></li>
+            </div>
+        </ul>
     </div>
-    <img class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
-
+    <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google's logo">
+    <div id="s-bar">
+        <ul>
+            <div id="s-icon">
+                <li><a href="#"><img src="search.png" style="margin-left: 10px;" alt="search icon"></a></li>
+                <li><form><input type="text"></form></li>
+                <li style="float: right;"><a href="#"><img  style="width: 24px; height: 24px; margin-right: 10px" src="voice.png" alt="voice icon"></a></li>
+            </div>
+        </ul>
+    </div>
+    <div id="s-buttons">
+        <ul>
+            <li><a href="#"><button class="s-button">Google Search</button></a></li>
+            <li style="float: right;"><a hred="#"><button class="s-button">I'm Feeling Lucky</button></a></li>
+        </ul>
+    </div>
+    <div id="footer">
+        <ul>
+            <li><a style="margin-left:10px" href="#">Advertising</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">How Search works</a></li>
+            <div style="float: right;">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Settings</a></li>
+            </div>
+        </ul>
+    </div>
 </body>
